@@ -13,15 +13,15 @@
 
         :root {
             --bg: #F3F3F3;
-            --white: #FFFFFF;
+            --white: #ffffff;
             --accent: #F66297;
-            --accent-hover: #e8507f;
-            --accent-light: rgba(246, 98, 151, 0.1);
+            --accent-hover: #e14d80;
+            --accent-light: rgba(246, 98, 151, 0.19);
             --text: #000000;
-            --text-secondary: #555555;
+            --text-sec: #555555;
             --text-muted: #777777;
-            --radius: 20px;
-            --radius-btn: 50px;
+            --radius: 30px;
+            --radius-btn: 100px;
         }
 
         html { scroll-behavior: smooth; }
@@ -35,121 +35,113 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .btn {
-            display: inline-block;
-            background: var(--accent);
-            color: #fff;
-            font-size: 16px;
-            font-weight: 600;
-            padding: 16px 40px;
-            border-radius: var(--radius-btn);
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background 0.2s, transform 0.2s;
-            font-family: inherit;
-        }
-
-        .btn:hover { background: var(--accent-hover); }
-        .btn:active { transform: translateY(2px); }
-
-        .section-title {
-            font-size: 32px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-title span { color: var(--accent); }
-
-        /* HERO */
+        /* ====== HERO ====== */
         .hero {
-            padding: 80px 0 60px;
+            padding: 30px 0 60px;
         }
 
         .hero-inner {
             display: flex;
             align-items: center;
-            gap: 60px;
+            gap: 40px;
         }
 
-        .hero-content {
-            flex: 1;
-        }
+        .hero-content { flex: 1; }
 
         .hero-title {
-            font-size: 42px;
-            font-weight: 700;
-            line-height: 1.15;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 1.2;
             color: var(--accent);
-            margin-bottom: 16px;
             text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         .hero-subtitle {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 500;
             color: var(--accent);
-            margin-bottom: 40px;
             line-height: 1.3;
+            margin-bottom: 60px;
         }
 
         .hero-desc {
             font-size: 18px;
             font-weight: 500;
             color: var(--text);
-            margin-bottom: 40px;
-            line-height: 1.5;
+            line-height: 1.4;
+            margin-bottom: 60px;
         }
 
         .hero-note {
-            font-size: 14px;
+            font-size: 16px;
             color: var(--text-muted);
+            font-weight: 500;
             margin-top: 16px;
         }
 
-        .hero-image {
-            flex: 1;
-            max-width: 500px;
+        .hero-image { flex: 1; max-width: 520px; }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .hero-image-placeholder {
             width: 100%;
-            aspect-ratio: 4/5;
-            border-radius: var(--radius);
-            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f48fb1);
+            aspect-ratio: 3/4;
+            border-radius: 20px;
+            background: linear-gradient(160deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
-            font-size: 18px;
+            padding-bottom: 30px;
+            font-size: 16px;
             color: var(--accent);
             font-weight: 500;
         }
 
-        /* PROGRAMS */
+        .btn-main {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 30px 40px;
+            border-radius: var(--radius-btn);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.2s, transform 0.15s;
+            font-family: inherit;
+            text-align: center;
+        }
+
+        .btn-main:hover { background: var(--accent-hover); }
+        .btn-main:active { transform: translateY(2px); }
+
+        /* ====== PROGRAMS ====== */
         .programs {
-            padding: 80px 0;
+            padding: 60px 0;
         }
 
-        .programs-category {
-            margin-bottom: 60px;
-        }
-
-        .programs-category:last-child { margin-bottom: 0; }
-
-        .category-title {
-            font-size: 28px;
+        .section-title {
+            font-size: 32px;
             font-weight: 600;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            line-height: 1.2;
         }
+
+        .section-title span { color: var(--accent); }
 
         .program-list {
             display: flex;
@@ -162,13 +154,13 @@
             border-radius: var(--radius);
             overflow: hidden;
             display: flex;
-            min-height: 220px;
+            min-height: 260px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .program-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
         }
 
         .program-card.flagship {
@@ -176,26 +168,25 @@
         }
 
         .program-image {
-            width: 45%;
-            min-height: 220px;
+            width: 50%;
+            position: relative;
+            overflow: hidden;
             flex-shrink: 0;
         }
 
         .program-image-placeholder {
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            inset: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 14px;
-            color: #fff;
+            color: rgba(255,255,255,0.8);
             font-weight: 500;
-            text-align: center;
-            padding: 20px;
         }
 
         .program-info {
-            padding: 28px;
+            padding: 20px 24px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -206,10 +197,10 @@
             display: inline-block;
             background: var(--accent-light);
             color: var(--accent);
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
-            padding: 5px 16px;
-            border-radius: 50px;
+            padding: 6px 20px;
+            border-radius: 100px;
             width: fit-content;
             margin-bottom: 10px;
         }
@@ -222,31 +213,32 @@
         }
 
         .program-name {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 8px;
             color: var(--text);
         }
 
         .program-desc {
-            font-size: 15px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-            margin-bottom: 20px;
+            font-size: 16px;
+            color: var(--text-sec);
+            line-height: 1.4;
+            margin-bottom: 15px;
+            font-weight: 400;
         }
 
         .program-desc strong {
             color: var(--text);
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .program-btn {
             display: inline-block;
             background: var(--accent);
             color: #fff;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 500;
-            padding: 10px 24px;
+            padding: 10px 22px;
             border-radius: var(--radius-btn);
             text-decoration: none;
             width: fit-content;
@@ -255,63 +247,103 @@
 
         .program-btn:hover { background: var(--accent-hover); }
 
-        /* CTA */
-        .cta-section {
-            padding: 80px 0;
-            text-align: center;
+        /* ====== FAQ ====== */
+        .faq-section {
+            padding: 60px 0;
         }
 
-        .cta-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 60px 40px;
-            max-width: 700px;
+        .faq-title {
+            font-size: 24px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .faq-wrapper {
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .cta-title {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 16px;
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 14px 0;
         }
 
-        .cta-title span { color: var(--accent); }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
 
-        .cta-desc {
+        .faq-question:hover { color: var(--accent); }
+
+        .faq-text {
+            text-align: left;
+            flex: 1;
+            font-weight: 500;
             font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            line-height: 1.6;
+            line-height: 1.4;
         }
 
-        /* FOOTER */
-        .footer {
-            padding: 40px 0;
+        .faq-icon {
+            font-size: 22px;
+            margin-left: 16px;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            width: 24px;
             text-align: center;
-            font-size: 13px;
-            color: var(--text-muted);
+            color: var(--accent);
+            font-weight: 300;
         }
 
-        /* RESPONSIVE */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding-top: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 12px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer p {
+            margin: 0;
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-sec);
+        }
+
+        /* ====== RESPONSIVE ====== */
         @media (max-width: 768px) {
-            .hero { padding: 40px 0; }
+            .hero { padding: 20px 0 40px; }
 
             .hero-inner {
                 flex-direction: column-reverse;
-                gap: 30px;
+                gap: 24px;
             }
 
             .hero-image { max-width: 100%; }
 
-            .hero-title { font-size: 28px; }
-            .hero-subtitle { font-size: 20px; }
-            .hero-desc { font-size: 16px; }
+            .hero-title { font-size: 26px; text-align: center; }
+            .hero-subtitle { font-size: 20px; text-align: center; margin-bottom: 30px; }
+            .hero-desc { font-size: 16px; text-align: center; margin-bottom: 30px; }
+            .hero-note { text-align: center; font-size: 14px; }
 
-            .btn {
+            .hero-content { display: flex; flex-direction: column; align-items: center; }
+
+            .btn-main {
                 width: 100%;
-                text-align: center;
-                padding: 18px 20px;
-                font-size: 15px;
+                padding: 26px 20px;
+                font-size: 16px;
             }
 
             .program-card {
@@ -322,29 +354,31 @@
             .program-image {
                 width: 100%;
                 min-height: 200px;
+                position: relative;
             }
 
             .program-info { padding: 20px; }
-            .program-name { font-size: 20px; }
+            .program-name { font-size: 18px; }
+            .program-desc { font-size: 14px; }
 
-            .section-title { font-size: 24px; }
-            .category-title { font-size: 22px; }
-
-            .cta-card { padding: 40px 24px; }
-            .cta-title { font-size: 22px; }
+            .section-title { font-size: 22px; }
+            .faq-title { font-size: 22px; }
+            .faq-text { font-size: 15px; }
         }
     </style>
 </head>
 <body>
 
+<!-- ====== ЭКРАН 1: HERO ====== -->
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
             <div class="hero-content">
-                <h1 class="hero-title">Приведите тело в форму</h1>
+                <h1 class="hero-title">Приведите тело в форму с&nbsp;профессиональным тренером</h1>
                 <p class="hero-subtitle">без диет, голода и запретов<br>с пользой для здоровья</p>
-                <p class="hero-desc">Похудеть, подтянуть ягодицы и живот, набрать форму в зале, восстановиться после родов — тренировки и питание под вашу цель</p>
-                <a href="#programs" class="btn">Выбрать программу</a>
+                <p class="hero-desc">Похудеть, подтянуть попу и живот, набрать форму<br>в зале, восстановиться после родов — тренировки<br>и питание под вашу цель</p>
+                <a href="#programs" class="btn-main">Выбрать программу</a>
+                <p class="hero-note">Для корректной работы сайта отключите VPN</p>
             </div>
             <div class="hero-image">
                 <div class="hero-image-placeholder">Фото тренера</div>
@@ -353,150 +387,194 @@
     </div>
 </section>
 
+<!-- ====== ЭКРАН 2: ПРОГРАММЫ (карточки) ====== -->
 <section class="programs" id="programs">
     <div class="container">
-        <h2 class="section-title">Программы тренировок <span>под вашу цель</span></h2>
+        <h2 class="section-title">Тренировки дома</h2>
+        <div class="program-list">
 
-        <div class="programs-category">
-            <h3 class="category-title">Тренировки дома</h3>
-            <div class="program-list">
-
-                <div class="program-card flagship">
-                    <div class="program-image">
-                        <div class="program-image-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);">Фото программы</div>
-                    </div>
-                    <div class="program-info">
-                        <div class="program-badge">ФЛАГМАН</div>
-                        <div class="program-name">Старт с нуля</div>
-                        <p class="program-desc"><strong>Освоите технику и втянетесь в регулярные тренировки</strong> — без травм и перенапряжения. Первая программа для тех, кто давно не занимался или начинает впервые.</p>
-                        <a href="#" class="program-btn">Подробнее</a>
-                    </div>
+            <div class="program-card flagship">
+                <div class="program-image">
+                    <div class="program-image-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);">Фото программы</div>
                 </div>
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-image-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">Фото программы</div>
-                    </div>
-                    <div class="program-info">
-                        <div class="program-tag">Марафон · 21 день</div>
-                        <div class="program-name">Марафон стройности</div>
-                        <p class="program-desc"><strong>Первый видимый результат за 21 день</strong> — уходит лишний объём, появляется тонус и лёгкость. Для тех, кто стартует с нуля.</p>
-                        <a href="#" class="program-btn">Подробнее</a>
-                    </div>
+                <div class="program-info">
+                    <div class="program-badge">ФЛАГМАН</div>
+                    <div class="program-name">Метод тренера</div>
+                    <p class="program-desc"><strong>Освоите технику и втянетесь в регулярные тренировки</strong> — без травм и через силу. Первая программа, с которой начинают все ученицы.</p>
+                    <a href="#" class="program-btn">Подробнее</a>
                 </div>
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-image-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">Фото программы</div>
-                    </div>
-                    <div class="program-info">
-                        <div class="program-tag">Марафон · 4 недели</div>
-                        <div class="program-name">Упругие ягодицы</div>
-                        <p class="program-desc"><strong>Подтянутые ягодицы с собственным весом</strong> — без оборудования. Для тех, кто хочет целенаправленно проработать нижнюю часть тела дома.</p>
-                        <a href="#" class="program-btn">Подробнее</a>
-                    </div>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-image-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">Фото программы</div>
-                    </div>
-                    <div class="program-info">
-                        <div class="program-tag">Марафон · 3 недели</div>
-                        <div class="program-name">Плоский живот</div>
-                        <p class="program-desc"><strong>Убрать выпирающий живот,</strong> который не уходит даже после похудения. Работа с глубокими мышцами пресса, которые отвечают за плоский живот.</p>
-                        <a href="#" class="program-btn">Подробнее</a>
-                    </div>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-image-placeholder" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4);">Фото программы</div>
-                    </div>
-                    <div class="program-info">
-                        <div class="program-tag">Курс · 6 недель</div>
-                        <div class="program-name">Жиросжигающий</div>
-                        <p class="program-desc"><strong>Сжечь жир и проявить рельеф за 6 недель.</strong> Интервальные тренировки с гантелями для тех, кто уже имеет опыт занятий.</p>
-                        <a href="#" class="program-btn">Подробнее</a>
-                    </div>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-image-placeholder" style="background: linear-gradient(135deg, #c3cfe2, #f5f7fa);">Фото программы</div>
-                    </div>
-                    <div class="program-info">
-                        <div class="program-tag">Курс · 8 недель</div>
-                        <div class="program-name">Восстановление после родов</div>
-                        <p class="program-desc"><strong>Мягкое возвращение в форму</strong> — безопасные упражнения для укрепления мышц тазового дна, пресса и спины. С учётом особенностей послеродового периода.</p>
-                        <a href="#" class="program-btn">Подробнее</a>
-                    </div>
-                </div>
-
             </div>
-        </div>
 
-        <div class="programs-category">
-            <h3 class="category-title">Тренировки в зале</h3>
-            <div class="program-list">
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-image-placeholder" style="background: linear-gradient(135deg, #2c3e50, #4ca1af);">Фото программы</div>
-                    </div>
-                    <div class="program-info">
-                        <div class="program-tag">Курс · 8 недель</div>
-                        <div class="program-name">Силовой для ягодиц</div>
-                        <p class="program-desc"><strong>Объёмные, округлые ягодицы</strong> — со штангой и тренажёрами. Прогрессия нагрузки, техника выполнения, план питания.</p>
-                        <a href="#" class="program-btn">Подробнее</a>
-                    </div>
+            <div class="program-card">
+                <div class="program-image">
+                    <div class="program-image-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">Фото программы</div>
                 </div>
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-image-placeholder" style="background: linear-gradient(135deg, #232526, #414345);">Фото программы</div>
-                    </div>
-                    <div class="program-info">
-                        <div class="program-tag">Курс · 12 недель</div>
-                        <div class="program-name">Полное тело</div>
-                        <p class="program-desc"><strong>Сбалансированная проработка всех групп мышц.</strong> Для тех, кто хочет гармоничную фигуру без перекосов. 4 тренировки в неделю.</p>
-                        <a href="#" class="program-btn">Подробнее</a>
-                    </div>
+                <div class="program-info">
+                    <div class="program-tag">Марафон</div>
+                    <div class="program-name">Стройности</div>
+                    <p class="program-desc"><strong>Первый видимый результат за 21 день</strong> — уходит первый жир, появляется тонус и лёгкость. Для тех, кто стартует с нуля.</p>
+                    <a href="#" class="program-btn">Подробнее</a>
                 </div>
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <div class="program-image-placeholder" style="background: linear-gradient(135deg, #ff512f, #dd2476);">Фото программы</div>
-                    </div>
-                    <div class="program-info">
-                        <div class="program-tag">Курс · 6 недель</div>
-                        <div class="program-name">Рельеф и сушка</div>
-                        <p class="program-desc"><strong>Убрать подкожный жир и проявить мышцы.</strong> Высокоинтенсивные тренировки + план питания для дефицита. Для подготовленных.</p>
-                        <a href="#" class="program-btn">Подробнее</a>
-                    </div>
-                </div>
-
             </div>
-        </div>
 
-    </div>
-</section>
+            <div class="program-card">
+                <div class="program-image">
+                    <div class="program-image-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">Фото программы</div>
+                </div>
+                <div class="program-info">
+                    <div class="program-tag">Марафон</div>
+                    <div class="program-name">Упругая попа 1.0</div>
+                    <p class="program-desc"><strong>Первый объём и подтянутость ягодиц</strong> — с собственным весом. Для тех, кто впервые целенаправленно работает над попой.</p>
+                    <a href="#" class="program-btn">Подробнее</a>
+                </div>
+            </div>
 
-<section class="cta-section" id="cta">
-    <div class="container">
-        <div class="cta-card">
-            <h2 class="cta-title">Начните тренироваться <span>сегодня</span></h2>
-            <p class="cta-desc">Выберите программу под свою цель и уровень подготовки. Результат заметите уже через 2-3 недели регулярных тренировок.</p>
-            <a href="#programs" class="btn">Выбрать программу</a>
+            <div class="program-card">
+                <div class="program-image">
+                    <div class="program-image-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">Фото программы</div>
+                </div>
+                <div class="program-info">
+                    <div class="program-tag">Марафон</div>
+                    <div class="program-name">Плоский живот</div>
+                    <p class="program-desc"><strong>Убрать вываливающийся живот,</strong> который не уходит даже после похудения. Тренировки на глубокие мышцы пресса, которые отвечают за плоский живот — а не за «кубики».</p>
+                    <a href="#" class="program-btn">Подробнее</a>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-image">
+                    <div class="program-image-placeholder" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4);">Фото программы</div>
+                </div>
+                <div class="program-info">
+                    <div class="program-tag">Курс</div>
+                    <div class="program-name">Жиросжигающий</div>
+                    <p class="program-desc"><strong>Сжечь жир и проявить рельеф — за 6 недель.</strong> Для тех, кто уже тренировался: с гантелями, по схеме интервальных нагрузок.</p>
+                    <a href="#" class="program-btn">Подробнее</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-<footer class="footer">
+<!-- ====== ЭКРАН 3: FAQ ====== -->
+<section class="faq-section" id="faq">
     <div class="container">
-        <p>&copy; 2026. Все права защищены.</p>
+        <h2 class="faq-title">Отвечаем на вопросы</h2>
+        <div class="faq-wrapper">
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-text">Подойдёт ли мне программа, если я никогда не тренировалась?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Да. На витрине есть программы для старта с нуля — например, «Метод тренера» и «Марафон стройности». Тренер показывает и объясняет каждое движение, вы просто повторяете. Если не знаете, с чего начать — напишите нам, поможем выбрать программу под вашу цель и уровень.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-text">Сколько времени в день нужно на тренировки?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>От 20 до 45 минут. Заниматься можно в любое удобное время — расписания нет, уроки открыты, включаете когда вам удобно днём или вечером.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-text">Можно ли тренироваться дома? Нужно ли оборудование?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, все программы рассчитаны на занятия дома. Для большинства достаточно коврика и собственного веса. Для некоторых программ пригодится минимальный инвентарь — фитнес-резинка, лёгкие гантели или утяжелители. Его можно заменить подручными средствами, например бутылками с водой.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-text">На какой срок открывается доступ к программе?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Срок доступа указан в описании каждой программы.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-text">Можно ли оплатить в рассрочку?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, рассрочка доступна. Условия указаны при оформлении заказа.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-text">Могу ли я оплатить картой иностранного банка?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Да. При оформлении заказа нажмите «Оплатить картой иностранного банка», выберите удобный способ на платёжной странице и подтвердите оплату.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-text">Я живу не в России. Смогу заниматься?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Да. Тренировки доступны в любой точке мира — нужен только смартфон, планшет или компьютер с интернетом.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-text">Как я получу доступ после оплаты?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Доступ к программам открывается в личном кабинете сразу после оплаты. Авторизация — по номеру телефона, который вы указали при оформлении заказа.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-text">Я оплатила, но не вижу доступ. Что делать?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Проверьте, что авторизовались по тому же номеру телефона, который указывали при оплате. Если доступа всё равно нет, напишите в поддержку — поможем.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-</footer>
+</section>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(function(question) {
+    question.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach(function(i) {
+            i.classList.remove('active');
+            i.querySelector('.faq-icon').textContent = '+';
+        });
+
+        if (!isActive) {
+            item.classList.add('active');
+            item.querySelector('.faq-icon').textContent = '×';
+        }
+    });
+});
+</script>
 
 </body>
 </html>
