@@ -469,21 +469,90 @@
             .nav { padding: 0 20px; }
             .nav-links { display: none; }
             .mob-toggle { display: block; }
-            .hero { padding: 0 20px 60px; }
+            .nav-inner { height: 64px; }
+            .nav-logo span { display: none; }
+            .hero { min-height: auto; padding: 128px 20px 56px; }
             .hero-deco { display: none; }
             .hero-bottom { flex-direction: column; align-items: flex-start; }
-            .hero-stats { gap: 28px; }
+            .hero-badge { margin-bottom: 28px; }
+            .hero h1 { margin-bottom: 32px; }
+            .hero-desc { max-width: none; }
+            .hero-stats { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
             .hero-stat { text-align: left; }
+            .hero-stat-num { font-size: 34px; }
+            .hero-stat-label { font-size: 11px; line-height: 1.35; }
             .sec { padding: 80px 20px; }
             .programs-grid, .port-grid, .team-grid { grid-template-columns: 1fr; }
             .port-item.big { grid-column: span 1; }
             .steps-grid { grid-template-columns: 1fr; gap: 32px; }
-            .test-card { flex: 0 0 300px; }
+            .test-card { flex: 0 0 min(300px, calc(100vw - 40px)); }
             .footer { padding: 40px 20px 32px; }
             .footer-top { grid-template-columns: 1fr; gap: 32px; }
             .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
             .logos-strip { gap: 24px; flex-wrap: wrap; padding: 32px 20px; }
             .divider { padding: 0 20px; }
+        }
+        @media (max-width: 480px) {
+            .pre-logo { gap: 12px; }
+            .pre-logo-mark { width: 46px; height: 46px; }
+            .pre-logo-text { font-size: 34px; }
+            .pre-sub { font-size: 10px; letter-spacing: 0.18em; }
+            .nav { padding: 0 16px; }
+            .mob-menu { padding: 92px 24px 28px; gap: 16px; }
+            .mob-menu a { font-size: 28px; }
+            .hero { padding: 112px 16px 48px; }
+            .hero-badge { font-size: 16px; gap: 10px; margin-bottom: 24px; }
+            .hero-badge::before { width: 24px; }
+            .hero h1 { font-size: 42px; line-height: 1; margin-bottom: 28px; }
+            .hero-bottom { gap: 28px; }
+            .hero-desc { font-size: 15px; line-height: 1.65; }
+            .hero-stats { grid-template-columns: 1fr; gap: 14px; }
+            .hero-stat {
+                display: grid; grid-template-columns: max-content 1fr; gap: 16px; align-items: baseline;
+                padding-top: 14px; border-top: 1px solid var(--bd);
+            }
+            .hero-stat-num { font-size: 30px; }
+            .hero-stat-label { margin-top: 0; }
+            .marquee-wrap { padding: 14px 0; }
+            .marquee-item { font-size: 16px; padding: 0 20px; }
+            .marquee-dot { margin-right: 20px; }
+            .sec { padding: 64px 16px; }
+            .s-label { margin-bottom: 12px; }
+            .s-title { font-size: 34px; line-height: 1.08; margin-bottom: 40px; }
+            .about-grid { gap: 36px; }
+            .about-text { font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
+            .about-manifesto { font-size: 22px; padding-left: 18px; margin-top: 32px; }
+            .about-value { grid-template-columns: 34px 1fr; gap: 14px; padding: 24px 0; }
+            .about-value-num { font-size: 24px; }
+            .step { padding: 0; text-align: left; display: grid; grid-template-columns: 48px 1fr; column-gap: 16px; }
+            .step-num { width: 48px; height: 48px; margin: 0; grid-row: span 2; }
+            .programs-grid { border-radius: 12px; }
+            .p-card { min-height: auto; padding: 32px 24px; }
+            .p-label { margin-bottom: 14px; }
+            .p-name { font-size: 34px; }
+            .p-feats { padding-bottom: 24px; }
+            .port-grid { gap: 12px; }
+            .port-item, .port-item.big { min-height: auto; padding: 24px; }
+            .port-item.big .port-name, .port-name { font-size: 26px; }
+            .port-top { flex-direction: column; align-items: flex-start; }
+            .port-bottom { gap: 16px; }
+            .test-track { gap: 12px; margin: 0 -16px; padding: 0 16px 8px; }
+            .test-card { flex-basis: calc(100vw - 32px); padding: 28px 24px; }
+            .test-quote { font-size: 18px; line-height: 1.45; margin-bottom: 24px; }
+            .team-card { padding: 32px 22px; }
+            .team-avatar { width: 60px; height: 60px; border-radius: 14px; margin-bottom: 16px; }
+            .logos-strip { justify-content: flex-start; gap: 18px; padding: 28px 16px; overflow: hidden; }
+            .logos-strip span { font-size: 13px; }
+            .apply-grid { gap: 40px; }
+            .apply-left > p { font-size: 15px; line-height: 1.65; margin-bottom: 28px; }
+            .apply-fact { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
+            .apply-fact-num { font-size: 28px; }
+            .apply-form { gap: 18px; }
+            .fg input, .fg select, .fg textarea { font-size: 16px; padding: 13px 14px; }
+            .form-submit { width: 100%; padding: 15px 24px; }
+            .footer { padding: 36px 16px 28px; }
+            .footer-top { gap: 28px; margin-bottom: 36px; }
+            .footer-brand p { max-width: none; }
         }
         @media (prefers-reduced-motion: reduce) {
             .reveal { opacity: 1; transform: none; transition: none; }
